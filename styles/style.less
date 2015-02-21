@@ -18,6 +18,11 @@ body {
 div#hero-wrapper {
   position: relative;
   height: 600px;
+  @media screen {
+    @media (max-width:767px) {
+      height: 400px;
+    }
+  }
 }
 
 div#hero {
@@ -32,8 +37,15 @@ div#hero {
   video#banner {
     display: inline-block;
     width: 100%;
-    // position: absolute;
-    // bottom: 0;
+    position: absolute;
+    bottom: 0;
+    object-fit: cover;
+    @media screen {
+      @media (max-width:1080px) {
+        height: 100%;
+        width: auto;
+      }
+    }
   }
 
 }
@@ -48,11 +60,28 @@ div#header {
   height: 550px;
   width: 100%;
   top: 50px;
+
+  @media screen {
+    @media (max-width:767px) {
+
+      height: 350px;
+    }
+  }
+
   h1  {
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 30px;
     font-size: 70pt;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen {
+      @media (max-width:767px) {
+        font-size: 40pt;
+      }
+    }
+
   }
 
   div.people {
@@ -62,6 +91,13 @@ div#header {
       float: left;
       text-align: center;
       img.face {
+        @media screen {
+            @media (max-width:767px) {
+              width: 40px;
+              height: 40px;
+            }
+        }
+
         width: 80px;
         height: 80px;
       }
@@ -102,7 +138,6 @@ div#content {
 
 div#article {
   width: 85%;
-  min-width: 950px;
   max-width: 1650px;
   margin: 0 auto;
 }
