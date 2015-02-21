@@ -13,6 +13,11 @@ div#hero-wrapper {
   position: relative;
   height: 600px;
 }
+@media screen and (max-width: 767px) {
+  div#hero-wrapper {
+    height: 400px;
+  }
+}
 div#hero {
   z-index: -1;
   position: absolute;
@@ -25,6 +30,15 @@ div#hero {
 div#hero video#banner {
   display: inline-block;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+}
+@media screen and (max-width: 1080px) {
+  div#hero video#banner {
+    height: 100%;
+    width: auto;
+  }
 }
 .text-center {
   text-align: center;
@@ -35,11 +49,24 @@ div#header {
   width: 100%;
   top: 50px;
 }
+@media screen and (max-width: 767px) {
+  div#header {
+    height: 350px;
+  }
+}
 div#header h1 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 70pt;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  div#header h1 {
+    font-size: 40pt;
+  }
 }
 div#header div.people div.person {
   width: 33%;
@@ -49,6 +76,12 @@ div#header div.people div.person {
 div#header div.people div.person img.face {
   width: 80px;
   height: 80px;
+}
+@media screen and (max-width: 767px) {
+  div#header div.people div.person img.face {
+    width: 40px;
+    height: 40px;
+  }
 }
 img.round {
   -webkit-border-radius: 40px;
@@ -69,7 +102,6 @@ div#content {
 }
 div#article {
   width: 85%;
-  min-width: 950px;
   max-width: 1650px;
   margin: 0 auto;
 }
